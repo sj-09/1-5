@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" ng-app="myapp" ng-controller="ctrl">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="./css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/prod.css"/>
+</head>
+<body>
+<div ng-class="{mark:flag}">
+    <ul ng-show="flag">
+        <li><input type="checkbox" id="check"/><label for="check"></label>全部</li>
+        <li>股票</li>
+        <li>债券</li>
+        <li>混合</li>
+        <li>指数</li>
+    </ul>
+</div>
+<div class="container">
+    <header class="header">
+        <p><span class="fa fa-list" ng-click="Mark()"></span>理财产品</p>
+    </header>
+    <section class="section">
+        <p><a href="#">债权产品</a><span>|</span><a href="#">优选基金</a></p>
+       <div class="scroll">
+           <div>
+        <div class="cont">
+            <div class="text"><b>押租宝</b> | <span>汽车供应链第75期</span></div>
+            <div class="year">
+                <div class="shu"><b>12</b></div>
+                <div class="zi">年化收益 <br/><b>.0%</b></div>
+                <div class="qi">期限 <br/><b>3</b>个月</div>
+                <div class="xian"><span>抢购</span> <br/> <a href="#" class="mt">已有<b>163</b>人购买</a></div>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="text"><b>押租宝</b> | <span>汽车供应链第75期</span></div>
+            <div class="year">
+                <div class="shu"><b>14</b></div>
+                <div class="zi">年化收益 <br/><b>.0%</b></div>
+                <div class="qi">期限 <br/><b>3</b>个月</div>
+                <div class="xian"><span>抢购</span> <br/> <a href="#" class="mt">已有<b>163</b>人购买</a></div>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="text"><b>押租宝</b> | <span>汽车供应链第75期</span></div>
+            <div class="year">
+                <div class="shu"><b>12</b></div>
+                <div class="zi">年化收益 <br/><b>.0%</b></div>
+                <div class="qi">期限 <br/><b>3</b>个月</div>
+                <div class="xian"><span>抢购</span> <br/> <a href="#" class="mt">已有<b>163</b>人购买</a></div>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="text"><b>押租宝</b> | <span>汽车供应链第75期</span></div>
+            <div class="year">
+                <div class="shu"><b>9</b></div>
+                <div class="zi">年化收益 <br/><b>.0%</b></div>
+                <div class="qi">期限 <br/><b>3</b>个月</div>
+                <div class="xian"><span>抢购</span> <br/> <a href="#" class="mt">已有<b>163</b>人购买</a></div>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="text"><b>押租宝</b> | <span>汽车供应链第75期</span></div>
+            <div class="year">
+                <div class="shu"><b>9</b></div>
+                <div class="zi">年化收益 <br/><b>.0%</b></div>
+                <div class="qi">期限 <br/><b>3</b>个月</div>
+                <div class="xian"><span>抢购</span> <br/> <a href="#" class="mt">已有<b>163</b>人购买</a></div>
+            </div>
+        </div>
+           </div>
+       </div>
+    </section>
+    <footer class="footer">
+        <div ng-click="bag()" ng-class="{bg:bgcl}"><i class="fa fa-download fa-3x"></i><br>首页</div>
+        <div class="bg"><i class="fa fa-money fa-3x"></i><br>理财产品</div>
+        <div><i class="fa fa-hand-rock-o fa-3x"></i><br>我的账户</div>
+        <div><i class="fa fa-ellipsis-h fa-3x"></i><br>更多</div>
+    </footer>
+</div>
+<script src="js/iscroll5.js"></script>
+<script src="./node_modules/angular/angular.js"></script>
+<script>
+    var wraps = new IScroll('.scroll');
+
+    var app=angular.module("myapp",[]);
+    app.controller("ctrl",function($scope){
+        $scope.flag=false;
+        $scope.Mark=function(){
+            $scope.flag=!$scope.flag;
+        };
+        $scope.bgcl=false;
+        $scope.bag=function(){
+            $scope.bgcl=!$scope.bgcl
+        }
+    })
+</script>
+</body>
+</html>
